@@ -9,9 +9,7 @@
       flex-direction: row;
       text-decoration: none;
       padding: 1rem;
-      /* font-family: Arial, Helvetica, sans-serif; */
-      /* font-weight: 500;
-      font-size: 12; */
+      font-size: small;
       color: white;
 }
 
