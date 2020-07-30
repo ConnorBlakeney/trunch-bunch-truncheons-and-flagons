@@ -15,8 +15,8 @@ export const scoreHTMLConverter = (score) => {
                   <li class="score--item score--teamScore">
                         ${score.teamScore}
                   </li>
-                  <li class="score--item score--gameDate>
-                        ${score.gameDate}
+                  <li class="score--item score--gameTimestamp>
+                  ${ new Date(score.gameTimestamp).toLocaleDateString("en-US")}
                   </li>
             </ul>
       `

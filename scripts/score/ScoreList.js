@@ -26,9 +26,10 @@ export const ScoreList = () => {
         
       render(scoreArray)
 
-      // getScores()
-      //       .then(() => {
-      //             const scores = useScores()
-      //             render(scores)
-      //       })
+      getScores()
+            return fetch("")
+            .then(() => {
+                  const scores = useScores()
+                  render(scores)
+            })
   }
