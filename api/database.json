@@ -1,0 +1,40 @@
+{
+    "teams": [
+        {
+            "id": 1,
+            "name": "The Hobbits",
+            "timestamp": // add time stamp
+        }
+    ],
+    "players": [
+        {
+            "id": 1,
+            "first": "Tom",
+            "last": "Bombadil",
+            "countryOrigin": "Middle Earth",
+            "teamId": 1
+        }
+        {
+            "id": 2,
+            "first": "Gandalf",
+            "last": "The White",
+            "countryOrigin": "Middle Earth",
+            "teamId": 1
+        }
+        {
+            "id": 3,
+            "first": "Bilbo",
+            "last": "Baggins",
+            "countryOrigin": "Middle Earth",
+            "teamId": 1
+        }
+    ],
+    "teamScores": [
+        {
+            "id": 1,
+            "gameScore": 1,
+            "teamId": 1,
+            "timestamp": // add time stamp
+        }
+    ]
+}
