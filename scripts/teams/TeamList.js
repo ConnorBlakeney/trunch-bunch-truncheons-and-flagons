@@ -1,15 +1,19 @@
-import {useTeams} from "./TeamProvider.js"
+import {useTeams, getTeams} from "./TeamProvider.js"
 import {TeamHTMLConverter} from "./Team.js"
 
 const contentTarget = document.querySelector(".sidebar--teams-list")
 
 export const listTeams = () => {
-  const allHTML = useTeams()
-    .map((team) => {
-      return TeamHTMLConverter(team)
+  getTeams()
+    .then( () => {
+      const allHTML = useTeams()
+      .map((team) => {
+        return TeamHTMLConverter(team)
+      })
+      .join("")
+      render(allHTML)
     })
-    .join("")
-  render(allHTML)
+  
 }
 
 const render = (htmlString) => {
