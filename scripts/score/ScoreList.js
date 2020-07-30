@@ -1,4 +1,4 @@
-import { useScores } from "./ScoreProvider.js";
+import { useScores, getScores } from "./ScoreProvider.js";
 import { scoreHTMLConverter } from "./Score.js"
 
 const scoreListTarget = document.querySelector(".sidebar--leaderboard")
@@ -27,7 +27,7 @@ export const ScoreList = () => {
       render(scoreArray)
 
       getScores()
-            return fetch("")
+            return fetch("http://localhost:8088/database")
             .then(() => {
                   const scores = useScores()
                   render(scores)

@@ -23,7 +23,7 @@ export const useScores = () => {
       return scores.slice()
 }
 
-export const getScores = () => {
+export const getScores = (scores) => {
       return fetch("http://localhost:8088/database")
         .then((response) => response.json())
         .then((parsedScores) => {
