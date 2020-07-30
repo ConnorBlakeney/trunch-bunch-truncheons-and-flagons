@@ -10,7 +10,6 @@ const render = (scores) => {
           scoreListHTML += scoreHTMLConverter(scoreObject)
       })
 
-  console.log(scoreListHTML)
 
       scoreListTarget.innerHTML = `
             <h2 class="heading heading--scores">
@@ -23,11 +22,9 @@ const render = (scores) => {
   }
 
 export const ScoreList = () => { 
-     console.log("SCORE LIST WAS INVOKED")   
       getScores()
             .then(() => {
                   const scores = useScores()
-            console.log(scores, "TEST SCORES RENDER")
                   render(scores)
             })
   }

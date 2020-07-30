@@ -9,22 +9,22 @@
   "players": [
     {
       "id": 1,
-      "first": "Tom",
-      "last": "Bombadil",
+      "nameFirst": "Tom",
+      "nameLast": "Bombadil",
       "countryOrigin": "Middle Earth",
       "teamId": 1
     },
     {
       "id": 2,
-      "first": "Gandalf",
-      "last": "The White",
+      "nameFirst": "Gandalf",
+      "nameLast": "The White",
       "countryOrigin": "Middle Earth",
       "teamId": 1
     },
     {
       "id": 3,
-      "first": "Bilbo",
-      "last": "Baggins",
+      "nameFirst": "Bilbo",
+      "nameLast": "Baggins",
       "countryOrigin": "Middle Earth",
       "teamId": 1
     }
