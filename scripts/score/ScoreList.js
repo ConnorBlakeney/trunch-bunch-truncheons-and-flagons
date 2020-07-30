@@ -27,7 +27,6 @@ export const ScoreList = () => {
       render(scoreArray)
 
       getScores()
-            return fetch("http://localhost:8088/database")
             .then(() => {
                   const scores = useScores()
                   render(scores)

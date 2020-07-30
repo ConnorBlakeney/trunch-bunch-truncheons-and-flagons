@@ -24,7 +24,7 @@ export const useScores = () => {
 }
 
 export const getScores = (scores) => {
-      return fetch("http://localhost:8088/database")
+      return fetch("http://localhost:8088/teamScores")
         .then((response) => response.json())
         .then((parsedScores) => {
           scores = parsedScores
