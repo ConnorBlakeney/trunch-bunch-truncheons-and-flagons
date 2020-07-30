@@ -1,0 +1,20 @@
+
+.navbar--container {
+      display: flex;
+      background-color: black;
+      border: 1px solid black;
+}
+
+.link {
+      flex-direction: row;
+      text-decoration: none;
+      padding: 1rem;
+      font-size: small;
+      color: white;
+}
+
+.navbar {
+      display: flex;
+      flex-direction: row;
+      margin: 1rem 0rem;
+}
