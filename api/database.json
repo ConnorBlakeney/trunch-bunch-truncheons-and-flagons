@@ -34,7 +34,7 @@
             "id": 1,
             "gameScore": 1,
             "teamId": 1,
-            "timestamp": // add time stamp
+            "gameTimeStamp": // add time stamp
         }
     ]
 }
