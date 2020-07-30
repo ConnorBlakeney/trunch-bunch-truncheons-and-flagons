@@ -4,19 +4,16 @@ export const scoreHTMLConverter = (score) => {
       return `
             <ul class="score--object">
                   <li class="score--item score--gameID">
-                        ${score.gameID}
+                        ${score.id}
                   </li>
                   <li class="score--item score--teamID">
-                        ${score.teamID}
-                  </li>
-                  <li class="score--item score--teamName">
-                        ${score.teamName}
+                        ${score.teamId}
                   </li>
                   <li class="score--item score--teamScore">
-                        ${score.teamScore}
+                        ${score.gameScore}
                   </li>
-                  <li class="score--item score--gameTimestamp>
-                  ${ new Date(score.gameTimestamp).toLocaleDateString("en-US")}
+                  <li class="score--item score--gameTimeStamp>
+                  ${ new Date(score.gameTimeStamp).toLocaleDateString("en-US")}
                   </li>
             </ul>
       `
