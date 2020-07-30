@@ -1,17 +1,21 @@
-// let array = []??
+let teams = []
 
-const teams = [
-    {
-    "teamId":,
-    "teamName":,
-    "dateCreated": new Date().toLocaleString()
-    }
-]
+/* 
+const eventHub = document.querySelector(".container")
+
+const dispatchStateChangeEvent = () => {
+    const teamStateChangedEvent = new CustomEvent("teamStateChanged")
+
+    eventHub.dispatchEvent(teamStateChangedEvent)
+}
+*/
 
 export const useTeams = () => teams.slice()
 
 export const getTeams = () => {
-    return fetch(//???)
-    .then(response => response.json())
-    .then(//teamArray => teams = teamArray)
+  return fetch("http://localhost:8088/database")
+    .then((response) => response.json())
+    .then((parsedTeams) => {
+      teams = parsedTeams
+    })
 }
