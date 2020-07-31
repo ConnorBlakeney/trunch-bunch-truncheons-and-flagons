@@ -9,16 +9,19 @@ eventHub.addEventListener("click", (clickEvent) => {
     const playerNameFirst = document.querySelector("#playerNameFirst")
     const playerNameLast = document.querySelector("#playerNameLast")
     const countryOrigin = document.querySelector("#countryOrigin")
+    const playerTeam = document.querySelector("#teamSelect")
 
     // Make a new object representation of a note
     const newPlayer = {
       nameFirst: playerNameFirst.value,
       nameLast: playerNameLast.value,
       countryOrigin: countryOrigin.value,
+      teamId: playerTeam.value,
     }
 
     // Change API state and application state
     savePlayer(newPlayer)
+    render()
   }
 })
 
