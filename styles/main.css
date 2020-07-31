@@ -1,0 +1,12 @@
+@import "./navbar.css";
+@import "./cursor.css";
+@import "./leaderboard.css";
+
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/*Typography
+--------------------------------------------------------------*/
+body {
+	font-family: fantasy;
+}
+

@@ -6,6 +6,8 @@ export const PlayerHTML = (playerObj) => {
             <li class="player--item player--nameFirst>${playerObj.nameFirst}</li>
             <li class="player--item player--nameLast>${playerObj.nameLast}</li>
             <li class="player--item player--originCountry> ${playerObj.countryOrigin}</li>
-            <li class="player--item player--team>${playerObj.team}</li>
+            <li class="player--item player--team>${playerObj.teamId}</li>
+        </div>
+    </ul>
         `
 }

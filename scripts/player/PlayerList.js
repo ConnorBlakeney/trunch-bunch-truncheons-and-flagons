@@ -1,20 +1,29 @@
 import{usePlayers, getPlayers} from "./PlayerProvider.js"
- import{playerHTML} from "./Player.js"
+import{ PlayerHTML } from "./Player.js"
  
+const contentElement = document.querySelector(".sidebar--players-list")
+
  export const PlayerList = () => {
-     const contentElement = document.querySelector(".players")
-     const players = usePlayers()
-     
-     let playerHTMLRepresentations = ""
- 
-     for(const currentPlayerObj of players){
-         playerHTMLRepresentations += playerHTML(currentPlayerObj)
-     }
- 
-     contentElement.innerHTML += `
+    getPlayers()
+        .then( () => {
+            const players = usePlayers()
     
-     <article class="player">
-     ${playerHTMLRepresentations}
-     </article>
-     `
-     }
+            let playerHTMLRepresentations = ""
+        
+            for(const currentPlayerObj of players){
+                playerHTMLRepresentations += PlayerHTML(currentPlayerObj)
+            }
+            console.log(playerHTMLRepresentations)
+            render(playerHTMLRepresentations)
+        })
+    
+}
+
+
+const render = (playerHTMLRepresentations) => {
+    contentElement.innerHTML += `
+    <article class="player">
+    ${playerHTMLRepresentations}
+    </article>
+    `
+}

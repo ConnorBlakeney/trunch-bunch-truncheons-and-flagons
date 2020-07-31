@@ -1,23 +1,10 @@
-const scores = [
-    {
-        gameID: "",
-        teamID: "",
-        teamScore: "",
-        gameDate: Date.new()
-
-    }
-]
-
-export const useScores = () => {
-    return useScores.slice()
-}
+let scores = []
+export const useScores = () => scores.slice()
 
 export const getScores = () => {
-    return fetch("")
-    .then(response => response.json())
-        .then(
-            scoresArray => {
-                scores = scoresArray
-            }
-        )
+      return fetch("http://localhost:8088/teamScores")
+        .then((response) => response.json())
+        .then((parsedScores) => {
+          scores = parsedScores
+        })
 }
