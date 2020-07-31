@@ -27,6 +27,36 @@
       "nameLast": "Baggins",
       "countryOrigin": "Middle Earth",
       "teamId": 1
+    },
+    {
+      "nameFirst": "frodo",
+      "nameLast": "baggins",
+      "countryOrigin": "middle earth",
+      "id": 4
+    },
+    {
+      "nameFirst": "",
+      "nameLast": "",
+      "countryOrigin": "",
+      "id": 5
+    },
+    {
+      "nameFirst": "gandalf",
+      "nameLast": "the grey",
+      "countryOrigin": "middle earth",
+      "id": 6
+    },
+    {
+      "nameFirst": "fewf",
+      "nameLast": "few",
+      "countryOrigin": "ffew",
+      "id": 7
+    },
+    {
+      "nameFirst": "ned",
+      "nameLast": "stark",
+      "countryOrigin": "westeros",
+      "id": 8
     }
   ],
   "teamScores": [
