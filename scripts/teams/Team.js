@@ -2,6 +2,6 @@
 
 export const TeamHTMLConverter = (team) => {
   return `
-        <div class="team--iteam">${team.name}</div>
+        <div class="team--item">${team.name}</div>
     `
 }

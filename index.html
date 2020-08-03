@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- <link rel="stylesheet" href="./styles/main.css"> -->
-      <title>Trunch Bunch</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./styles/main.css"> -->
+    <title>Trunch Bunch</title>
+  </head>
 
-<body>
-      <main class="container">
-            
-            <header>
-                  <nav class="header header__navbar navbar--container">
-                  </nav>
-                  <div class="header header__logo logo--container">
-                  </div>
-            </header>
+  <body>
+    <main class="container">
+      <header>
+        <nav class="header header__navbar navbar--container"></nav>
+        <div class="header header__logo logo--container"></div>
+      </header>
 
-            
-            <section class="main--content content--left">
-                  <article class="create-team-form--container">
-                  </article>
-                  <article class="create-player-form--container">
-                  </article>
-                  <article class="choose-teams-form--container">
-                  </article>
-                  <article class="scoreboard--container">
-                  </article>
-            </section>
+      <section class="main--content content--left">
+        <article class="create-team-form--container"></article>
+        <article class="create-player-form--container"></article>
+        <div class="teamSelectContainer"></div>
+        <article class="choose-teams-form--container"></article>
+        <article class="scoreboard--container"></article>
+      </section>
 
-            <section class="sidebar--container sidebar--right">
+      <section class="sidebar--container sidebar--right">
+        <article
+          class="container--sidebar sidebar sidebar--sticky sidebar--scrollable sidebar--leaderboard"
+        ></article>
 
-                  <article class="container--sidebar sidebar sidebar--sticky sidebar--scrollable sidebar--leaderboard">
-                  </article>
+        <article
+          class="container--sidebar sidebar sidebar--sticky sidebar--scrollable sidebar--players-list"
+        ></article>
 
-                  <article class="container--sidebar sidebar sidebar--sticky sidebar--scrollable sidebar--players-list">
-                  </article>
+        <article
+          class="container--sidebar sidebar sidebar--sticky sidebar--scrollable sidebar--teams-list"
+        ></article>
+      </section>
+    </main>
 
-                  <article class="container--sidebar sidebar sidebar--sticky sidebar--scrollable sidebar--teams-list">
-                  </article>
-                  
-            </section>
-
-      </main>
-
-<script type="module" src="./scripts/main.js"></script>
-
-</body>
-
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
 </html>
