@@ -1,7 +1,7 @@
 import { useScores, getScores } from "./ScoreProvider.js";
 import { scoreHTMLConverter } from "./Score.js"
 
-const scoreListTarget = document.querySelector(".sidebar--leaderboard")
+const scoreListTarget = document.querySelector(".scoreboard--container")
 
 const render = (scores) => {
 
