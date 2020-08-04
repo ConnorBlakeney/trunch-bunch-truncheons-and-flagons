@@ -9,6 +9,16 @@
       "name": "fdqfe",
       "timestamp": 1596225918465,
       "id": 2
+    },
+    {
+      "name": "lfie",
+      "timestamp": 1596462763728,
+      "id": 3
+    },
+    {
+      "name": "sdfs",
+      "timestamp": 1596483717409,
+      "id": 4
     }
   ],
   "players": [
@@ -37,8 +47,20 @@
   "teamScores": [
     {
       "id": 1,
-      "gameScore": 1,
+      "gameScore": 7,
       "teamId": 1,
+      "gameTimeStamp": 1596134759006
+    },
+    {
+      "id": 2,
+      "gameScore": 100,
+      "teamId": 3,
+      "gameTimeStamp": 1596134759006
+    },
+    {
+      "id": 3,
+      "gameScore": 1000,
+      "teamId": 2,
       "gameTimeStamp": 1596134759006
     }
   ]
