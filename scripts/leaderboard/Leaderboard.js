@@ -2,9 +2,6 @@ export const LeaderboardHTML = (leaderboardObj) => {
     return `
         <section class="leaderboard">
             <span class="team-column">
-                <h5 class="header--team-column">
-                    Team
-                </h5>
                 ${leaderboardObj.teamName}
             </span>
             <span class="player-column">
