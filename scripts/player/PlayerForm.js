@@ -16,7 +16,7 @@ eventHub.addEventListener("click", (clickEvent) => {
       nameFirst: playerNameFirst.value,
       nameLast: playerNameLast.value,
       countryOrigin: countryOrigin.value,
-      teamId: playerTeam.value,
+      teamId: parseInt(playerTeam.value),
     }
 
     // Change API state and application state
