@@ -24,7 +24,7 @@ eventHub.addEventListener("teamStateChanged", () => {
 })
 
 const render = (teams) => {
-  console.log("TeamSelect: Team select rendered to DOM")
+  // console.log("TeamSelect: Team select rendered to DOM")
   contentTarget.innerHTML = `
         <select class="dropdown" id="teamSelect">
             <option value="0">Please select a team</option>
@@ -38,7 +38,7 @@ const render = (teams) => {
 }
 
 export const TeamSelect = () => {
-  console.log("TeamSelect: Initial render of team select")
+  // console.log("TeamSelect: Initial render of team select")
   getTeams().then(() => {
     const allTeams = useTeams()
     render(allTeams)

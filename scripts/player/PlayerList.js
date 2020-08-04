@@ -13,7 +13,6 @@ const contentElement = document.querySelector(".sidebar--players-list")
             for(const currentPlayerObj of players){
                 playerHTMLRepresentations += PlayerHTML(currentPlayerObj)
             }
-            console.log(playerHTMLRepresentations)
             render(playerHTMLRepresentations)
         })
     
