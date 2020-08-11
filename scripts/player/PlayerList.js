@@ -1,7 +1,7 @@
 import{usePlayers, getPlayers} from "./PlayerProvider.js"
 import{ PlayerHTML } from "./Player.js"
  
-const contentElement = document.querySelector(".scoreboard--container")
+const contentElement = document.querySelector(".lb--container")
 
  export const PlayerList = () => {
     getPlayers()

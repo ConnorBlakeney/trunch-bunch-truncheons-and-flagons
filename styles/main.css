@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-@import "./forms.css";
+@import "./sidebar.css";
 
 /*Typography
 --------------------------------------------------------------*/
@@ -10,7 +10,7 @@
 
 body {
 	font-family: fantasy;
-	background-color: rgb(118, 228, 228);
+	background-color: rgb(24, 60, 60);
 }
 
 .main {

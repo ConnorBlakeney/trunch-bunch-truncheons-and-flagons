@@ -3,7 +3,7 @@ import { getTeams, useTeams } from "../teams/TeamProvider.js";
 import { getScores, useScores } from "../score/ScoreProvider.js";
 import { LeaderboardHTML } from "./Leaderboard.js"
 
-const leaderboardTarget =  document.querySelector(".scoreboard--container")
+const leaderboardTarget =  document.querySelector(".lb--container")
 
 let leaderboardData = [
     // {

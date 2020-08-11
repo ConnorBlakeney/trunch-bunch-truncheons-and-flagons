@@ -9,31 +9,37 @@
 
   <body>
     <main class="container">
+      <sidebar class="sidebar content--left">
 
-      <sidebar class="forms">
-        <article class="create-team-form--container"></article>
-        <article class="create-player-form--container"></article>
-
-        <div class="teamSelectContainer"></div>
-
-        <article class="choose-teams-form--container"></article>
-
-        <article class="scoreboard--container">
-          <div class="teams-column">
-            <h5 class="header--team-column">
-              Team
+        <article class="block create-team-form--container"></article>
+        <article class="block create-player-form--container"></article>
+        <article class="block select-team--container"></div>
+        <article class="block lb--container">
+          <div class="lb-column teams-column">
+            <h5 class="lb-header header--team-column">
+              Team Name
+            </h5>
+          <div class="lb-column players-column">
+            <h5 class="lb-header header--player-column">
+              Players
             </h5>
           </div>
-          <div class="players-column">
-          </div>
+          <div class="lb-column score-column">
+            <h5 class="lb-header header--player-column">
+               Score
+            </h5>
           </div>
         </article>
       </sidebar>
 
-      <section class="main--game-play">
+      <section class="content--main game-play">
+        <span class="block choose-teams-form--container"></span>
       </section>
-
     </main>
+
+    <span class="pop-up">
+      <div class="msg-box content"></div>
+    </span>
 
     <script type="module" src="./scripts/main.js"></script>
   </body>
