@@ -5,6 +5,8 @@ import {TeamForm} from "./teams/TeamForm.js"
 import {PlayerForm} from "./player/PlayerForm.js"
 import {TeamSelect} from "./teams/TeamSelect.js"
 import {listLeaderboard} from "./leaderboard/LeaderboardList.js"
+import {buttonRender} from "./game/StartButton.js"
+import "./game/StartSelect.js"
 
 ScoreList()
 listTeams()
@@ -13,3 +15,4 @@ TeamForm()
 PlayerForm()
 TeamSelect()
 listLeaderboard()
+buttonRender()
