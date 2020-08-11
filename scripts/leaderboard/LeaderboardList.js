@@ -1,6 +1,10 @@
 import { getPlayers, usePlayers } from "../player/PlayerProvider.js";
 import { getTeams, useTeams } from "../teams/TeamProvider.js";
 import { getScores, useScores } from "../score/ScoreProvider.js";
+import { LeaderboardHTML } from "./Leaderboard.js"
+
+const leaderboardTarget =  document.querySelector(".scoreboard--container")
+
 let leaderboardData = [
     // {
     // teamName: "",
@@ -52,8 +56,25 @@ export const listLeaderboard = () => {
                         team.teamScore += score.gameScore
                     }   
                 }
-            }            
+
+            }
+            console.log("TEST leaderboardData", leaderboardData) 
+            render(leaderboardData)  
+                   
         })  
+      
 }
 
-console.log("test", leaderboardData)
+const render = (leaderboardData) => {
+
+      let digitalLeaderboard = ""
+      
+      leaderboardData.forEach((thisData) => {
+            digitalLeaderboard += LeaderboardHTML(thisData)
+      })
+      console.log("TEST render ", digitalLeaderboard)
+      leaderboardTarget.innerHTML = `
+            ${digitalLeaderboard}
+      `
+}
+

@@ -1,7 +1,7 @@
 import {useTeams, getTeams} from "./TeamProvider.js"
 import {TeamHTMLConverter} from "./Team.js"
 
-const contentTarget = document.querySelector(".sidebar--teams-list")
+const contentTarget = document.querySelector(".scoreboard--container")
 
 export const listTeams = () => {
   getTeams()

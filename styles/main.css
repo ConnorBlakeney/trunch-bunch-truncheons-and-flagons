@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+@import "./forms.css";
 
 /*Typography
 --------------------------------------------------------------*/
-body {
-	font-family: fantasy;
+
+* {
+	border: 1px dotted hotpink;
 }
 
+body {
+	font-family: fantasy;
+	background-color: rgb(118, 228, 228);
+}
+
+.main {
+	display: flex;
+	flex-direction: row wrap;
+}

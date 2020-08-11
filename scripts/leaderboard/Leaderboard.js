@@ -1,13 +1,22 @@
 export const LeaderboardHTML = (leaderboardObj) => {
     return `
-    <ul class="list--players>
-        <div class="criminalCard"> 
-            <li class="player--item player--nameFirst>${playerObj.id}</li>
-            <li class="player--item player--nameFirst>${playerObj.nameFirst}</li>
-            <li class="player--item player--nameLast>${playerObj.nameLast}</li>
-            <li class="player--item player--originCountry> ${playerObj.countryOrigin}</li>
-            <li class="player--item player--team>${playerObj.teamId}</li>
-        </div>
-    </ul>
-        `
+        <section class="leaderboard">
+            <span class="team-column">
+                ${leaderboardObj.teamName}
+            </span>
+            <span class="player-column">
+                <h5 class="header--player-column">
+                    Player Count
+                </h5>
+                ${leaderboardObj.playerCount}
+            </span>
+            <span class="score-column">
+                <h5 class="header--score-column">
+                    Team Score
+                </h5>
+                ${leaderboardObj.teamScore}
+            </span>
+        </section>
+    `
 }
+
