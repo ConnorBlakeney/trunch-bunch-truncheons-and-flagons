@@ -68,7 +68,7 @@ export const listLeaderboard = () => {
 
             }
             console.log("TEST leaderboardData", leaderboardData) 
-            render(leaderboardData)  
+            render(leaderboardData.reverse())  
                    
         })  
       
