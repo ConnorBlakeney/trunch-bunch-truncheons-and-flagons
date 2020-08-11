@@ -4,6 +4,15 @@ import { getScores, useScores } from "../score/ScoreProvider.js";
 import { LeaderboardHTML } from "./Leaderboard.js"
 
 const leaderboardTarget =  document.querySelector(".scoreboard--container")
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("playerStateChanged", () => {
+    listLeaderboard()
+})
+
+eventHub.addEventListener("teamStateChanged", () => {
+    listLeaderboard()
+})
 
 let leaderboardData = [
     // {
@@ -59,7 +68,7 @@ export const listLeaderboard = () => {
 
             }
             console.log("TEST leaderboardData", leaderboardData) 
-            render(leaderboardData)  
+            render(leaderboardData.reverse())  
                    
         })  
       
