@@ -67,7 +67,7 @@ export const listLeaderboard = () => {
                 }
 
             }
-            console.log("TEST leaderboardData", leaderboardData) 
+
             render(leaderboardData.reverse())  
                    
         })  
@@ -81,7 +81,7 @@ const render = (leaderboardData) => {
       leaderboardData.forEach((thisData) => {
             digitalLeaderboard += LeaderboardHTML(thisData)
       })
-      console.log("TEST render ", digitalLeaderboard)
+     
       leaderboardTarget.innerHTML = `
             ${digitalLeaderboard}
       `
