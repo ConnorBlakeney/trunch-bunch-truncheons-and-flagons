@@ -1,4 +1,5 @@
 .forms {
+      flex: 1 0 3rem;
       display: flex;
       flex-direction: column;
       width: 30%
