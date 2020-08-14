@@ -7,6 +7,7 @@ import {TeamSelect} from "./teams/TeamSelect.js"
 import {listLeaderboard} from "./leaderboard/LeaderboardList.js"
 import {buttonRender} from "./game/GameStartButton.js"
 import "./game/GameStartSelect.js"
+import "./game/GameScores.js"
 
 ScoreList()
 listTeams()
