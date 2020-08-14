@@ -5,10 +5,6 @@
 /*Typography
 --------------------------------------------------------------*/
 
-* {
-	border: 1px dotted hotpink;
-}
-
 body {
 	font-family: fantasy;
 	background-color: rgb(118, 228, 228);

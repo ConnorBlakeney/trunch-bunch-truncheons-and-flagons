@@ -5,6 +5,15 @@
       width: 30%
 }
 
+.create-team-form--container {
+      margin: 10px 0;
+      border: 1px black solid;
+}
+
+.create-player {
+      margin: 10px 0;
+      border: 1px black solid;
+}
 
 .playerForm {
       display: flex;
@@ -15,3 +24,4 @@
       align-items: stretch;
       padding: -.5rem .5rem;
 }
+
