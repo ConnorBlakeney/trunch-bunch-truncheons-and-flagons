@@ -2,6 +2,7 @@ import { useScores, getScores } from "./ScoreProvider.js";
 import { scoreHTMLConverter } from "./Score.js"
 
 const scoreListTarget = document.querySelector(".scoreboard--container")
+const eventHub = document.querySelector(".container")
 
 const render = (scores) => {
 
@@ -28,3 +29,27 @@ export const ScoreList = () => {
                   render(scores)
             })
   }
+
+
+eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
+    let currentTeamOneScore = []
+    let currentTeamTwoScore = []
+    let currentTeamThreeScore = []
+
+    currentTeamOneScore += customEvent.detail.teamOneScore
+    currentTeamTwoScore += customEvent.detail.teamTwoScore
+    currentTeamThreeScore += customEvent.detail.teamThreeScore
+
+    console.log(currentTeamOneScore, "test1")
+})
+
+
+
+
+// detail: {
+//         roundScores: {
+//           teamOneScore: teamOneScore;
+//           teamTwoScore: teamTwoScore;
+//           teamThreeScore: teamThreeScore
+//         }
+//       }

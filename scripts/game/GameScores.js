@@ -23,24 +23,21 @@ const render = (team1ID, team2ID, team3ID) => {
         <fieldset class="input--container">
             <label for="score1">${team1Obj.name}</label>
             <!-- string interpolate something? maybe? team id? beuller?-->
-            <input name="score1" class="score--input1" type="text" placeholder="Enter score...">10</input>
+            <input name="score1" class="score--input1" type="text" placeholder="Enter score..."></input>
         </fieldset>
         <fieldset class="input--container">
             <label for="score2">${team2Obj.name}</label>
-            <input name="score2" class="score--input2" type="text" placeholder="Enter score...">10</input>
+            <input name="score2" class="score--input2" type="text" placeholder="Enter score..."></input>
         </fieldset>
         <fieldset class="input--container">
             <label for="score3">${team3Obj.name}</label>
-            <input name="score3" class="score--input3" type="text" placeholder="Enter score...">10</input>
+            <input name="score3" class="score--input3" type="text" placeholder="Enter score..."></input>
         </fieldset>
         <button class="button button--save" id="saveRoundScores">Save Round Scores</button>
     </div>
 `
 }
 
-let teamOneGameScore = [];
-let teamTwoGameScore = [];
-let teamThreeGameScore = [];
 eventHub.addEventListener("click", clickEvent => {
   // let teamOneScore = 0
 
@@ -50,18 +47,19 @@ eventHub.addEventListener("click", clickEvent => {
     const teamThreeScore = parseInt(document.querySelector(".score--input3").value)
     // TODO: Tasks get the cumulative team scores  -@monicakay at 8/14/2020, 9:51:54 AM
     //
-    const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", customEvent => {
+    const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
       detail: {
-        roundScores: {
-          teamOneScore: teamOneScore;
-          teamTwoScore: teamTwoScore;
+          teamOneScore: teamOneScore,
+          teamTwoScore: teamTwoScore,
           teamThreeScore: teamThreeScore
-        }
       }
     })
+    debugger
+    console.log(teamOneScore)
     eventHub.dispatchEvent(roundScoresRecorded)
-
-    
+    document.querySelector(".score--input1").value = '';
+    document.querySelector(".score--input2").value = '';
+    document.querySelector(".score--input3").value = '';  
   }
 })
 
