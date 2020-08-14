@@ -22,7 +22,6 @@ const render = (team1ID, team2ID, team3ID) => {
     <div class="score--input--form">
         <fieldset class="input--container">
             <label for="score1">${team1Obj.name}</label>
-            <!-- string interpolate something? maybe? team id? beuller?-->
             <input name="score1" class="score--input1" type="text" placeholder="Enter score..."></input>
         </fieldset>
         <fieldset class="input--container">
@@ -39,14 +38,11 @@ const render = (team1ID, team2ID, team3ID) => {
 }
 
 eventHub.addEventListener("click", clickEvent => {
-  // let teamOneScore = 0
 
   if(clickEvent.target.id === "saveRoundScores") {
     const teamOneScore = parseInt(document.querySelector(".score--input1").value)
     const teamTwoScore = parseInt(document.querySelector(".score--input2").value)
     const teamThreeScore = parseInt(document.querySelector(".score--input3").value)
-    // TODO: Tasks get the cumulative team scores  -@monicakay at 8/14/2020, 9:51:54 AM
-    //
     const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
       detail: {
           teamOneScore: teamOneScore,
@@ -54,15 +50,9 @@ eventHub.addEventListener("click", clickEvent => {
           teamThreeScore: teamThreeScore
       }
     })
-    debugger
-    console.log(teamOneScore)
     eventHub.dispatchEvent(roundScoresRecorded)
     document.querySelector(".score--input1").value = '';
     document.querySelector(".score--input2").value = '';
     document.querySelector(".score--input3").value = '';  
   }
 })
-
-// take the value
-// store the value as a detail
-// and send it to somewhere else

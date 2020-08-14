@@ -41,7 +41,6 @@ export const listLeaderboard = () => {
         })
 
         .then(() => {
-            // console.log("test", scores, teams, players)
             for(const team of teams) {
             leaderboardData.push( 
                 {teamName: team.name,

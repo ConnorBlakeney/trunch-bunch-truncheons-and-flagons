@@ -20,8 +20,6 @@ eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
     gameState.scores.currentTeamOneScore += customEvent.detail.teamOneScore
     gameState.scores.currentTeamTwoScore += customEvent.detail.teamTwoScore
     gameState.scores.currentTeamThreeScore += customEvent.detail.teamThreeScore
-
-    // console.log(currentTeamOneScore, "test1")
     render()
 })
 

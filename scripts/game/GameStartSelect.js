@@ -1,4 +1,4 @@
-import { useTeams, getTeams } from "../teams/TeamProvider.js"
+import { useTeams } from "../teams/TeamProvider.js"
 
 const eventHub = document.querySelector(".container")
 const startSelectTarget = document.querySelector(".main--game-play")
@@ -49,7 +49,6 @@ const renderButton = () => {
 }
 
 const startSelectRender = (teams) => {
-  // console.log("TeamSelect: Team select rendered to DOM")
   startSelectTarget.innerHTML = `
     <select class="dropdown" id="teamSelect1">
       <option value="0">Please Select Team 1</option>
