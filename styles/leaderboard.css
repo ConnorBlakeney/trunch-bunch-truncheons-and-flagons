@@ -1,0 +1,24 @@
+.scoreboard--container {
+  margin: 10px 0;
+  border: 1px black solid;
+  padding: 1rem ;
+}
+
+.leaderboard-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.leaderboard-team-name {
+  width: 11rem;
+}
+
+.leaderboard-player-count {
+  width: 8rem
+}
+
+.leaderboard-score {
+  width: 6rem;
+}

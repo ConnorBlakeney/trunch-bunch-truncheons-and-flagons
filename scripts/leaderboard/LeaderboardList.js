@@ -83,6 +83,17 @@ const render = (leaderboardData) => {
       })
      
       leaderboardTarget.innerHTML = `
+        <div class="leaderboard-row">
+            <div class="leaderboard-team-name">
+                Team Name
+            </div>
+            <div class="leaderboard-player-count">
+                Player Count
+            </div>
+            <div class="leaderboard-score">
+                Team Score
+            </div>
+        </div>
             ${digitalLeaderboard}
       `
 }
