@@ -4,17 +4,17 @@ const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".main--game-play")
 
 eventHub.addEventListener("allTeamsSelected", (customEvent) => {
-   const team1 = parseInt(customEvent.detail.team1Id)
-   const team2 = parseInt(customEvent.detail.team2Id)
-   const team3 = parseInt(customEvent.detail.team3Id)
-render(team1, team2, team3)
+   const team1ID = parseInt(customEvent.detail.team1Id)
+   const team2ID = parseInt(customEvent.detail.team2Id)
+   const team3ID = parseInt(customEvent.detail.team3Id)
+render(team1ID, team2ID, team3ID)
 })
 
-const render = (team1, team2, team3) => {
+const render = (team1ID, team2ID, team3ID) => {
     const allTeams = useTeams()
-    const team1Obj = allTeams.find(team => team.id === team1)
-    const team2Obj = allTeams.find(team => team.id === team2)
-    const team3Obj = allTeams.find(team => team.id === team3)
+    const team1Obj = allTeams.find(team => team.id === team1ID)
+    const team2Obj = allTeams.find(team => team.id === team2ID)
+    const team3Obj = allTeams.find(team => team.id === team3ID)
 
     contentTarget.innerHTML = `
     <div class="score--input--form">

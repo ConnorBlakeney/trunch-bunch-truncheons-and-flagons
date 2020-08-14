@@ -23,7 +23,6 @@ eventHub.addEventListener("click", clickEvent => {
     })
 
     eventHub.dispatchEvent(allTeamsSelectedDispatched)
-    console.log(allTeamsSelectedDispatched)
   }
 })
 
