@@ -22,7 +22,7 @@ eventHub.addEventListener("click", clickEvent => {
       }
     })
 
-    dispatchEvent(allTeamsSelectedDispatched)
+    eventHub.dispatchEvent(allTeamsSelectedDispatched)
   }
 })
 
