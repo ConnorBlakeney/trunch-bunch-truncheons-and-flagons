@@ -1,6 +1,7 @@
 .scoreboard--container {
   margin: 10px 0;
   border: 1px black solid;
+  padding: 1rem ;
 }
 
 .leaderboard-row {
@@ -11,7 +12,7 @@
 }
 
 .leaderboard-team-name {
-  width: 10rem;
+  width: 11rem;
 }
 
 .leaderboard-player-count {
