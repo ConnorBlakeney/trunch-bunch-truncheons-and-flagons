@@ -1,4 +1,4 @@
-import {ScoreList} from "./score/ScoreList.js"
+// import {ScoreList} from "./score/ScoreList.js"
 import {listTeams} from "./teams/TeamList.js"
 import {PlayerList} from "./player/PlayerList.js"
 import {TeamForm} from "./teams/TeamForm.js"
@@ -8,8 +8,9 @@ import {listLeaderboard} from "./leaderboard/LeaderboardList.js"
 import {buttonRender} from "./game/GameStartButton.js"
 import "./game/GameStartSelect.js"
 import "./game/GameScores.js"
+import "./game/CurrentGame.js"
 
-ScoreList()
+// ScoreList()
 listTeams()
 PlayerList()
 TeamForm()

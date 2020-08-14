@@ -1,4 +1,3 @@
-
 const eventHub = document.querySelector(".container")
 const startTarget = document.querySelector(".main--game-play")
 
@@ -14,4 +13,3 @@ export const buttonRender = (team) => {
           <button id="startButton">Start Game</button>
       `
   }
-  
