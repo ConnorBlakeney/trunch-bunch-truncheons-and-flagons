@@ -1,12 +1,18 @@
-.forms {
+.left-container {
+      flex: 1 0 3rem;
       display: flex;
       flex-direction: column;
       width: 30%
 }
 
-.main--game-play {
-      display: flex;
-      width: 70%;
+.create-team-form--container {
+      margin: 10px 0;
+      border: 1px black solid;
+}
+
+.create-player {
+      margin: 10px 0;
+      border: 1px black solid;
 }
 
 .playerForm {
@@ -18,3 +24,4 @@
       align-items: stretch;
       padding: -.5rem .5rem;
 }
+

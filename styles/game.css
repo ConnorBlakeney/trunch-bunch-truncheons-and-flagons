@@ -1,0 +1,6 @@
+.main--content {
+  flex: 3 0 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
