@@ -29,6 +29,11 @@
       "name": "sadf",
       "timestamp": 1597163331675,
       "id": 6
+    },
+    {
+      "name": "as;knveoi",
+      "timestamp": 1597416505098,
+      "id": 7
     }
   ],
   "players": [
@@ -73,6 +78,13 @@
       "countryOrigin": "asdf",
       "teamId": 6,
       "id": 6
+    },
+    {
+      "nameFirst": "asdfg",
+      "nameLast": "asdg",
+      "countryOrigin": "asdg",
+      "teamId": 0,
+      "id": 7
     }
   ],
   "teamScores": [

@@ -27,19 +27,22 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 eventHub.addEventListener("change", (changeEvent) => {
-  const isTeam1Selected = document.querySelector("#teamSelect1").value !== "0"
-  const isTeam2Selected = document.querySelector("#teamSelect2").value !== "0"
-  const isTeam3Selected = document.querySelector("#teamSelect3").value !== "0"
-  
-  if(isTeam1Selected && isTeam2Selected && isTeam3Selected) {
-    
-    return renderButton()
+  if(changeEvent.target.id === "teamSelect1" || changeEvent.target.id === "teamSelect2" ||changeEvent.target.id === "teamSelect3" ) {
+
+    const isTeam1Selected = document.querySelector("#teamSelect1").value !== "0"
+    const isTeam2Selected = document.querySelector("#teamSelect2").value !== "0"
+    const isTeam3Selected = document.querySelector("#teamSelect3").value !== "0"
+
+    if(isTeam1Selected && isTeam2Selected && isTeam3Selected) {
+
+      return renderButton()
+    }
   }
 })
 
 const renderButton = () => {
   const buttonTarget = document.querySelector(".buttonContainer")
-  
+
   buttonTarget.innerHTML = `
   <button id="allTeamsChosenButton">START THE GAME</button>
   `
@@ -53,7 +56,7 @@ const startSelectRender = (teams) => {
       ${teams.map((team) => {
         return `<option value="${team.id}">${team.name}</option>`
       })
-      .join("")} 
+      .join("")}
     </select>
 
     <select class="dropdown" id="teamSelect2">
