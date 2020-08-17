@@ -34,12 +34,7 @@ eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
 
 
 
-<<<<<<< HEAD
-
-const render = () => {
-=======
 const render = gameState => {
->>>>>>> b896afac8684b49837984aaa2291947921779a94
 
     contentTarget.innerHTML = `
     <h3>Current Game</h3>

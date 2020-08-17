@@ -1,5 +1,4 @@
 import{useTeams} from "../teams/TeamProvider.js"
-import { findWinner } from "./CurrentGame.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".main--game-play")
@@ -57,12 +56,25 @@ const render = (team1Name, team2Name, team3Name) => {
 }
 
 export const findWinner = () => {
-    let teamScores = []
-    teamScores.push(gameState.scores.currentTeamOneScore, gameState.scores.currentTeamTwoScore, gameState.scores.currentTeamThreeScore)
-    teamScores.sort()
+    // let teamScores = []
+    // teamScores.push(gameState.scores.currentTeamOneScore, gameState.scores.currentTeamTwoScore, gameState.scores.currentTeamThreeScore)
+    const sortedArray = gameScoresArray.sort((a, b) => {
+        return b.score - a.score
+    })
+    console.log(sortedArray[0].name)
+    return sortedArray[0].name
 }
 
 let round = 0
+
+let gameScoresArray = []
+
+const addToGameScoresArray = (teamName, teamScore) => {
+    gameScoresArray.push({
+        name: teamName,
+        score: teamScore
+    })
+}
 
 eventHub.addEventListener("click", clickEvent => {
 
@@ -86,8 +98,12 @@ eventHub.addEventListener("click", clickEvent => {
 
     round++
     if (round >= 3) {
-        return findWinner(teamOneScore, teamTwoScore, teamThreeScore)
-        
+        addToGameScoresArray(gameState.teams.teamOneName, gameState.scores.currentTeamOneScore)
+        addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
+        addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
+        findWinner(gameScoresArray)
+
+
     }
     }
   }
