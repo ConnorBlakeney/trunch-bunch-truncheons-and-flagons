@@ -1,4 +1,5 @@
 import{useTeams} from "../teams/TeamProvider.js"
+import { findWinner } from "./CurrentGame.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".main--game-play")
@@ -10,7 +11,12 @@ eventHub.addEventListener("allTeamsSelected", (customEvent) => {
 render(team1ID, team2ID, team3ID)
 })
 
-
+export const findWinner = () => {
+    let teamScores = []
+    teamScores.push(gameState.scores.currentTeamOneScore, gameState.scores.currentTeamTwoScore, gameState.scores.currentTeamThreeScore)
+    teamScores.sort()
+    teamScores.find()
+}
 
 const render = (team1ID, team2ID, team3ID) => {
     const allTeams = useTeams()
@@ -36,6 +42,7 @@ const render = (team1ID, team2ID, team3ID) => {
     </div>
 `
 }
+let round = 0
 
 eventHub.addEventListener("click", clickEvent => {
 
@@ -54,5 +61,14 @@ eventHub.addEventListener("click", clickEvent => {
     document.querySelector(".score--input1").value = '';
     document.querySelector(".score--input2").value = '';
     document.querySelector(".score--input3").value = '';  
+
+    round++
+    if (round >= 3) {
+        return findWinner(teamOneScore, teamTwoScore, teamThreeScore)
+        
+    }
+    }
   }
-})
+)
+
+

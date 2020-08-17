@@ -1,4 +1,5 @@
 import { useTeams } from "../teams/TeamProvider.js";
+import { saveScores } from "../score/ScoreProvider.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".currentGameScore")
@@ -14,6 +15,27 @@ let gameState = {
             teamThreeName: ""
         }
 }
+
+// let new = 
+
+
+//     {
+//       gameScore: 0,
+//       teamId: 1,
+//       gameTimeStamp: 1596134759006
+//     } 
+//     // {
+//     //   gameScore: 0,
+//     //   teamId: 1,
+//     //   gameTimeStamp: 1596134759006
+//     // }, 
+//     // {
+//     //   gameScore: 0,
+//     //   teamId: 1,
+//     //   gameTimeStamp: 1596134759006
+//     // } 
+// }
+
 
 eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
 
@@ -38,6 +60,7 @@ eventHub.addEventListener("allTeamsSelected", (customEvent) => {
     gameState.teams.teamThreeName = team3Obj.name
     render()
 })
+
 
 const render = () => {
 
