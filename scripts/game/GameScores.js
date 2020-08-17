@@ -8,15 +8,9 @@ eventHub.addEventListener("allTeamsSelected", (customEvent) => {
    const team1ID = parseInt(customEvent.detail.team1Id)
    const team2ID = parseInt(customEvent.detail.team2Id)
    const team3ID = parseInt(customEvent.detail.team3Id)
-render(team1ID, team2ID, team3ID)
+   render(team1ID, team2ID, team3ID)
 })
 
-export const findWinner = () => {
-    let teamScores = []
-    teamScores.push(gameState.scores.currentTeamOneScore, gameState.scores.currentTeamTwoScore, gameState.scores.currentTeamThreeScore)
-    teamScores.sort()
-    teamScores.find()
-}
 
 const render = (team1ID, team2ID, team3ID) => {
     const allTeams = useTeams()
@@ -42,6 +36,13 @@ const render = (team1ID, team2ID, team3ID) => {
     </div>
 `
 }
+
+export const findWinner = () => {
+    let teamScores = []
+    teamScores.push(gameState.scores.currentTeamOneScore, gameState.scores.currentTeamTwoScore, gameState.scores.currentTeamThreeScore)
+    teamScores.sort()
+}
+
 let round = 0
 
 eventHub.addEventListener("click", clickEvent => {
