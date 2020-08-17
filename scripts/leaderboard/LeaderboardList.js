@@ -7,10 +7,12 @@ const leaderboardTarget =  document.querySelector(".scoreboard--container")
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("playerStateChanged", () => {
+    leaderboardData = []
     listLeaderboard()
 })
 
 eventHub.addEventListener("teamStateChanged", () => {
+    leaderboardData = []
     listLeaderboard()
 })
 
