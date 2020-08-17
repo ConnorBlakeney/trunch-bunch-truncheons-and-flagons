@@ -7,24 +7,16 @@ const leaderboardTarget =  document.querySelector(".scoreboard--container")
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("playerStateChanged", () => {
-    leaderboardData = []
     listLeaderboard()
 })
 
 eventHub.addEventListener("teamStateChanged", () => {
-    leaderboardData = []
     listLeaderboard()
 })
 
-let leaderboardData = [
-    // {
-    // teamName: "",
-    // playerCount: 0,
-    // teamScore: 0
-    // }
-]
 
 export const listLeaderboard = () => {  
+    let leaderboardData = []
     let teams = []
     let players = []
     let scores = []
