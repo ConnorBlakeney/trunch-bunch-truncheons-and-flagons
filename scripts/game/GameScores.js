@@ -56,8 +56,6 @@ const render = (team1Name, team2Name, team3Name) => {
 }
 
 export const findWinner = () => {
-    // let teamScores = []
-    // teamScores.push(gameState.scores.currentTeamOneScore, gameState.scores.currentTeamTwoScore, gameState.scores.currentTeamThreeScore)
     const sortedArray = gameScoresArray.sort((a, b) => {
         return b.score - a.score
     })
