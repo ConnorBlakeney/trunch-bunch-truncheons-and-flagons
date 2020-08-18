@@ -55,6 +55,25 @@ const render = (team1Name, team2Name, team3Name) => {
 `
 }
 
+export const findWinner = () => {
+    const sortedArray = gameScoresArray.sort((a, b) => {
+        return b.score - a.score
+    })
+    console.log(sortedArray[0].name)
+    return sortedArray[0].name
+}
+
+let round = 0
+
+let gameScoresArray = []
+
+const addToGameScoresArray = (teamName, teamScore) => {
+    gameScoresArray.push({
+        name: teamName,
+        score: teamScore
+    })
+}
+
 eventHub.addEventListener("click", clickEvent => {
 
   if(clickEvent.target.id === "saveRoundScores") {
@@ -74,5 +93,18 @@ eventHub.addEventListener("click", clickEvent => {
     document.querySelector(".score--input1").value = '';
     document.querySelector(".score--input2").value = '';
     document.querySelector(".score--input3").value = '';  
+
+    round++
+    if (round >= 3) {
+        addToGameScoresArray(gameState.teams.teamOneName, gameState.scores.currentTeamOneScore)
+        addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
+        addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
+        findWinner(gameScoresArray)
+
+
+    }
+    }
   }
-})
+)
+
+

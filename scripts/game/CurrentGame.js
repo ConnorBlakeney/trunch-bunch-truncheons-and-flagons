@@ -1,5 +1,3 @@
-import { useTeams } from "../teams/TeamProvider.js";
-
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".currentGameScore")
 
