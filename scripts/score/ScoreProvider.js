@@ -20,7 +20,7 @@ const dispatchStateChangeEvent = () => {
 export const saveScores = (score) => {
     const jsonScore = JSON.stringify(score)
 
-    return fetch('http://localhost:8088/database/teamScores', {
+    return fetch('http://localhost:8088/teamScores', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
