@@ -6,34 +6,14 @@
       "timestamp": 1596134759006
     },
     {
-      "name": "fdqfe",
-      "timestamp": 1596225918465,
+      "name": "The Best Team Ever",
+      "timestamp": 1596559111993,
       "id": 2
     },
     {
-      "name": "lfie",
-      "timestamp": 1596462763728,
+      "name": "The Balrogs",
+      "timestamp": 1597694413748,
       "id": 3
-    },
-    {
-      "name": "sdfs",
-      "timestamp": 1596483717409,
-      "id": 4
-    },
-    {
-      "name": "The Best Team Ever",
-      "timestamp": 1596559111993,
-      "id": 5
-    },
-    {
-      "name": "sadf",
-      "timestamp": 1597163331675,
-      "id": 6
-    },
-    {
-      "name": "as;knveoi",
-      "timestamp": 1597416505098,
-      "id": 7
     }
   ],
   "players": [
@@ -59,85 +39,36 @@
       "teamId": 1
     },
     {
-      "nameFirst": "Medicare",
-      "nameLast": "Of",
-      "countryOrigin": "Kentucky",
-      "teamId": 0,
+      "nameFirst": "John",
+      "nameLast": "Smith",
+      "countryOrigin": "USA",
+      "teamId": 2,
       "id": 4
     },
     {
-      "nameFirst": "fahsdl",
-      "nameLast": "",
-      "countryOrigin": "",
-      "teamId": 0,
-      "id": 5
-    },
-    {
-      "nameFirst": "",
-      "nameLast": "",
-      "countryOrigin": "asdf",
-      "teamId": 6,
+      "nameFirst": "Joe",
+      "nameLast": "Balrog",
+      "countryOrigin": "Moria",
+      "teamId": 3,
       "id": 6
-    },
-    {
-      "nameFirst": "asdfg",
-      "nameLast": "asdg",
-      "countryOrigin": "asdg",
-      "teamId": 0,
-      "id": 7
-    },
-    {
-      "nameFirst": "Connor",
-      "nameLast": "Blakenei",
-      "countryOrigin": "uas",
-      "teamId": 5,
-      "id": 8
-    },
-    {
-      "nameFirst": "",
-      "nameLast": "",
-      "countryOrigin": "",
-      "teamId": 5,
-      "id": 9
-    },
-    {
-      "nameFirst": "",
-      "nameLast": "",
-      "countryOrigin": "",
-      "teamId": 0,
-      "id": 10
-    },
-    {
-      "nameFirst": "",
-      "nameLast": "",
-      "countryOrigin": "",
-      "teamId": 0,
-      "id": 11
-    },
-    {
-      "nameFirst": "",
-      "nameLast": "",
-      "countryOrigin": "",
-      "teamId": 0,
-      "id": 12
     }
   ],
   "teamScores": [
     {
       "id": 1,
-      "gameScore": 7,
+      "gameScore": 5,
       "teamId": 1,
       "gameTimeStamp": 1596134759006
     },
     {
       "id": 2,
-      "gameScore": 100,
-      "teamId": 3,
+      "gameScore": 1,
+      "teamId": 2,
       "gameTimeStamp": 1596134759006
     },
     {
       "id": 3,
-      "gameScore": 1000,
+      "gameScore": 2,
       "teamId": 2,
       "gameTimeStamp": 1596134759006
     }
