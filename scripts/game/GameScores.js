@@ -11,7 +11,7 @@ let gameState = {
   teams: {
       teamOneName: "",
       teamTwoName: "",
-      teamThreeName: ""
+      teamThreeName: "",
   }
 }
 
@@ -80,29 +80,38 @@ eventHub.addEventListener("click", clickEvent => {
     const teamOneScore = parseInt(document.querySelector(".score--input1").value)
     const teamTwoScore = parseInt(document.querySelector(".score--input2").value)
     const teamThreeScore = parseInt(document.querySelector(".score--input3").value)
-    gameState.scores.currentTeamOneScore += teamOneScore
-    gameState.scores.currentTeamTwoScore += teamTwoScore
-    gameState.scores.currentTeamThreeScore += teamThreeScore
 
-    const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
-      detail: {
-          gameState: gameState
-      }
-    })
-    eventHub.dispatchEvent(roundScoresRecorded)
-    document.querySelector(".score--input1").value = '';
-    document.querySelector(".score--input2").value = '';
-    document.querySelector(".score--input3").value = '';  
+    if(teamOneScore <= 3 && teamTwoScore <= 3 && teamThreeScore <= 3){
 
-    round++
-    if (round >= 3) {
-        addToGameScoresArray(gameState.teams.teamOneName, gameState.scores.currentTeamOneScore)
-        addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
-        addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
-        findWinner(gameScoresArray)
-        
-        
-
+        gameState.scores.currentTeamOneScore += teamOneScore
+        gameState.scores.currentTeamTwoScore += teamTwoScore
+        gameState.scores.currentTeamThreeScore += teamThreeScore
+    
+        const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
+          detail: {
+              gameState: gameState
+          }
+        })
+        eventHub.dispatchEvent(roundScoresRecorded)
+        document.querySelector(".score--input1").value = '';
+        document.querySelector(".score--input2").value = '';
+        document.querySelector(".score--input3").value = '';  
+    
+        round++
+        if (round >= 3) {
+            addToGameScoresArray(gameState.teams.teamOneName, gameState.scores.currentTeamOneScore)
+            addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
+            addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
+            findWinner(gameScoresArray)
+            
+            
+            
+    
+    
+        }
+    }
+    else {
+        window.alert("Scores have to be below 3 points per team! Please follow these rules!")
     }
     }
   }
