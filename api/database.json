@@ -51,6 +51,41 @@
       "countryOrigin": "Moria",
       "teamId": 3,
       "id": 6
+    },
+    {
+      "nameFirst": "",
+      "nameLast": "",
+      "countryOrigin": "",
+      "teamId": 0,
+      "id": 7
+    },
+    {
+      "nameFirst": "",
+      "nameLast": "",
+      "countryOrigin": "",
+      "teamId": 0,
+      "id": 8
+    },
+    {
+      "nameFirst": "a",
+      "nameLast": "w",
+      "countryOrigin": "e",
+      "teamId": 0,
+      "id": 9
+    },
+    {
+      "nameFirst": "e",
+      "nameLast": "a",
+      "countryOrigin": "c",
+      "teamId": 2,
+      "id": 10
+    },
+    {
+      "nameFirst": "ae",
+      "nameLast": "e",
+      "countryOrigin": "c",
+      "teamId": 3,
+      "id": 11
     }
   ],
   "teamScores": [

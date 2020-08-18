@@ -14,6 +14,10 @@ eventHub.addEventListener("teamStateChanged", () => {
     listLeaderboard()
 })
 
+eventHub.addEventListener("scoreStateChanged", () => {
+    listLeaderboard()
+})
+
 
 export const listLeaderboard = () => {  
     let leaderboardData = []
@@ -54,8 +58,9 @@ export const listLeaderboard = () => {
 
             for(const score of scores) {
                 for (const team of leaderboardData) {
-                    if(score.teamId === team.teamId) {
+                    if(score.id === team.teamId) {
                         team.teamScore += score.gameScore
+                        console.log(team.teamId)
                     }   
                 }
 

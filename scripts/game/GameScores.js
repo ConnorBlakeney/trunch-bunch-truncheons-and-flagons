@@ -100,7 +100,8 @@ eventHub.addEventListener("click", clickEvent => {
         addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
         addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
         findWinner(gameScoresArray)
-
+        
+        
 
     }
     }
