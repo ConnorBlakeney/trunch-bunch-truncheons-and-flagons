@@ -162,7 +162,6 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "closeBtn") {
         scoreTarget.classList.remove("visible")
         buttonRender()
-        render
 }
 })
 
