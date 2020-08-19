@@ -60,7 +60,6 @@ export const listLeaderboard = () => {
                 for (const team of leaderboardData) {
                     if(score.id === team.teamId) {
                         team.teamScore += score.gameScore
-                        console.log(team.teamId)
                     }   
                 }
 

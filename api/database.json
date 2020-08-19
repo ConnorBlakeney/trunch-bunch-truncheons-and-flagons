@@ -108,40 +108,22 @@
       "gameTimeStamp": 1596134759006
     },
     {
-      "gameScore": 5,
+      "gameScore": 6,
       "teamId": 1,
-      "gameTimeStamp": 1597784657147,
+      "gameTimeStamp": 1597861710812,
       "id": 4
     },
     {
       "gameScore": 5,
       "teamId": 2,
-      "gameTimeStamp": 1597784657147,
+      "gameTimeStamp": 1597861710812,
       "id": 5
     },
     {
-      "gameScore": 8,
+      "gameScore": 5,
       "teamId": 3,
-      "gameTimeStamp": 1597784657147,
+      "gameTimeStamp": 1597861710812,
       "id": 6
-    },
-    {
-      "gameScore": 7,
-      "teamId": 1,
-      "gameTimeStamp": 1597861345071,
-      "id": 7
-    },
-    {
-      "gameScore": 7,
-      "teamId": 2,
-      "gameTimeStamp": 1597861345071,
-      "id": 8
-    },
-    {
-      "gameScore": 6,
-      "teamId": 3,
-      "gameTimeStamp": 1597861345071,
-      "id": 9
     }
   ]
 }
