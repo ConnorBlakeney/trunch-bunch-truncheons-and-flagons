@@ -13,8 +13,8 @@ eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
 const render = gameState => {
 
     contentTarget.innerHTML = `
-    <h3>Current Game</h3>
-        <div className="teams">
+        <div class="scoreboard">
+            <h3>Current Game</h3>
             <div class="scoreboard-row">
                 <div class="scoreboard-team-name">Name</div>
                 <div class="scoreboard-score">Score</div>
