@@ -164,9 +164,3 @@ eventHub.addEventListener("click", clickEvent => {
         buttonRender()
 }
 })
-
-// make big div with class "list"
-// add class to make visible, remove class with click
-// target score--input--form
-// add close button
-// 3 smaller divs, first place: , second place:, third place:
