@@ -3,7 +3,7 @@ import { getTeams, useTeams } from "../teams/TeamProvider.js";
 import { getScores, useScores } from "../score/ScoreProvider.js";
 import { LeaderboardHTML } from "./Leaderboard.js"
 
-const leaderboardTarget =  document.querySelector(".scoreboard--container")
+const leaderboardTarget =  document.querySelector(".leaderboard--container")
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("playerStateChanged", () => {
@@ -80,14 +80,14 @@ const render = (leaderboardData) => {
       })
      
       leaderboardTarget.innerHTML = `
-        <div class="leaderboard-row">
-            <div class="leaderboard-team-name">
+        <div class="scoreboard-row">
+            <div class="scoreboard-team-name">
                 Team Name
             </div>
-            <div class="leaderboard-player-count">
+            <div class="scoreboard-player-count">
                 Player Count
             </div>
-            <div class="leaderboard-score">
+            <div class="scoreboard-score">
                 Team Score
             </div>
         </div>
