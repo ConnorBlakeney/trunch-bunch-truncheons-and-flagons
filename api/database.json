@@ -142,6 +142,24 @@
       "teamId": 1,
       "gameTimeStamp": 1597860611945,
       "id": 9
+    },
+    {
+      "gameScore": 5,
+      "teamId": 1,
+      "gameTimeStamp": 1597861207920,
+      "id": 10
+    },
+    {
+      "gameScore": 4,
+      "teamId": 2,
+      "gameTimeStamp": 1597861207921,
+      "id": 11
+    },
+    {
+      "gameScore": 4,
+      "teamId": 3,
+      "gameTimeStamp": 1597861207921,
+      "id": 12
     }
   ]
 }
