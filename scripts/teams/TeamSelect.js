@@ -9,8 +9,11 @@ let teams = []
 const teamSizeLimit = 3
 
 eventHub.addEventListener("teamStateChanged", () => {
-  const allTeams = useTeams()
-  render(allTeams)
+  TeamSelect()
+})
+
+eventHub.addEventListener("playerStateChanged", () => {
+  TeamSelect()
 })
 
 const render = () => {
