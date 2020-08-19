@@ -106,6 +106,42 @@
       "gameScore": 2,
       "teamId": 2,
       "gameTimeStamp": 1596134759006
+    },
+    {
+      "gameScore": 5,
+      "teamId": 1,
+      "gameTimeStamp": 1597784657147,
+      "id": 4
+    },
+    {
+      "gameScore": 5,
+      "teamId": 2,
+      "gameTimeStamp": 1597784657147,
+      "id": 5
+    },
+    {
+      "gameScore": 8,
+      "teamId": 3,
+      "gameTimeStamp": 1597784657147,
+      "id": 6
+    },
+    {
+      "gameScore": 6,
+      "teamId": 2,
+      "gameTimeStamp": 1597860611945,
+      "id": 7
+    },
+    {
+      "gameScore": 4,
+      "teamId": 3,
+      "gameTimeStamp": 1597860611945,
+      "id": 8
+    },
+    {
+      "gameScore": 4,
+      "teamId": 1,
+      "gameTimeStamp": 1597860611945,
+      "id": 9
     }
   ]
 }
