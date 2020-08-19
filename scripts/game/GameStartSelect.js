@@ -14,39 +14,28 @@ eventHub.addEventListener("click", clickEvent => {
     const team2Id = document.querySelector("#teamSelect2").value
     const team3Id =  document.querySelector("#teamSelect3").value
 
-    const allTeamsSelectedDispatched = new CustomEvent("allTeamsSelected", {
-      detail: {
-        team1Id: team1Id,
-        team2Id: team2Id,
-        team3Id: team3Id
-      }
-    })
+    const isTeamOneZero = team1Id === "0"
+    const isTeamTwoZero = team2Id === "0"
+    const isTeamThreeZero = team3Id === "0"
 
-    eventHub.dispatchEvent(allTeamsSelectedDispatched)
-  }
-})
-
-eventHub.addEventListener("change", (changeEvent) => {
-  if(changeEvent.target.id === "teamSelect1" || changeEvent.target.id === "teamSelect2" ||changeEvent.target.id === "teamSelect3" ) {
-
-    const isTeam1Selected = document.querySelector("#teamSelect1").value !== "0"
-    const isTeam2Selected = document.querySelector("#teamSelect2").value !== "0"
-    const isTeam3Selected = document.querySelector("#teamSelect3").value !== "0"
-
-    if(isTeam1Selected && isTeam2Selected && isTeam3Selected) {
-
-      return renderButton()
+    if( team1Id === team2Id || team1Id === team3Id || team2Id === team3Id ) {
+      window.alert("Oops! Please select 3 unique teams.")
+    }
+    else if (isTeamOneZero || isTeamTwoZero || isTeamThreeZero){
+      window.alert("Oops! Please make sure all teams are selected.")
+    }
+    else {
+      const allTeamsSelectedDispatched = new CustomEvent("allTeamsSelected", {
+        detail: {
+          team1Id: team1Id,
+          team2Id: team2Id,
+          team3Id: team3Id
+        }
+      })
+      eventHub.dispatchEvent(allTeamsSelectedDispatched)
     }
   }
 })
-
-const renderButton = () => {
-  const buttonTarget = document.querySelector(".buttonContainer")
-
-  buttonTarget.innerHTML = `
-  <button id="allTeamsChosenButton">START THE GAME</button>
-  `
-}
 
 const startSelectRender = (teams) => {
   startSelectTarget.innerHTML = `
@@ -74,6 +63,7 @@ const startSelectRender = (teams) => {
       .join("")}
     </select>
 
-    <div class="buttonContainer"></div>
+    <button id="allTeamsChosenButton">START THE GAME</button>
     `
 }
+
