@@ -89,6 +89,24 @@
       "teamId": 3,
       "gameTimeStamp": 1597784657147,
       "id": 6
+    },
+    {
+      "gameScore": 7,
+      "teamId": 1,
+      "gameTimeStamp": 1597861345071,
+      "id": 7
+    },
+    {
+      "gameScore": 7,
+      "teamId": 2,
+      "gameTimeStamp": 1597861345071,
+      "id": 8
+    },
+    {
+      "gameScore": 6,
+      "teamId": 3,
+      "gameTimeStamp": 1597861345071,
+      "id": 9
     }
   ]
 }
