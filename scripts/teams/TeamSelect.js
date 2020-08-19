@@ -6,7 +6,7 @@ const eventHub = document.querySelector(".container")
 
 let players = []
 let teams = []
-
+const teamSizeLimit = 3
 
 eventHub.addEventListener("teamStateChanged", () => {
   const allTeams = useTeams()
@@ -45,6 +45,6 @@ const filterOutFullTeams = () => {
         playerCount++
       }
     })
-    return playerCount < 3
+    return playerCount < teamSizeLimit
   })
 }
