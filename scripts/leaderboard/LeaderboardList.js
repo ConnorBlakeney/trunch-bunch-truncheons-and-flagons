@@ -60,6 +60,10 @@ export const listLeaderboard = () => {
                 }
 
             }
+            
+            leaderboardData.sort( ( a, b) => {
+                return a.teamScore - b.teamScore
+            })
 
             render(leaderboardData.reverse())  
                    
