@@ -1,7 +1,9 @@
 import{useTeams} from "../teams/TeamProvider.js"
+import { saveScores } from "../score/ScoreProvider.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".main--game-play")
+
 let gameState = {
   scores: {
       currentTeamOneScore: 0,
@@ -18,9 +20,9 @@ let gameState = {
 
 
 eventHub.addEventListener("allTeamsSelected", (customEvent) => {
-  const team1ID = parseInt(customEvent.detail.team1Id)
-  const team2ID = parseInt(customEvent.detail.team2Id)
-  const team3ID = parseInt(customEvent.detail.team3Id)
+    const team1ID = parseInt(customEvent.detail.team1Id)
+    const team2ID = parseInt(customEvent.detail.team2Id)
+    const team3ID = parseInt(customEvent.detail.team3Id)
 
   const allTeams = useTeams()
   const team1Obj = allTeams.find(team => team.id === team1ID)
@@ -30,6 +32,11 @@ eventHub.addEventListener("allTeamsSelected", (customEvent) => {
   gameState.teams.teamOneName = team1Obj.name
   gameState.teams.teamTwoName = team2Obj.name
   gameState.teams.teamThreeName = team3Obj.name
+
+  gameState.teams.teamOneId = team1Obj.id
+  gameState.teams.teamTwoId = team2Obj.id
+  gameState.teams.teamThreeId = team3Obj.id
+
   render(team1Obj.name, team2Obj.name, team3Obj.name)
 })
 
@@ -80,28 +87,55 @@ eventHub.addEventListener("click", clickEvent => {
     const teamOneScore = parseInt(document.querySelector(".score--input1").value)
     const teamTwoScore = parseInt(document.querySelector(".score--input2").value)
     const teamThreeScore = parseInt(document.querySelector(".score--input3").value)
-    gameState.scores.currentTeamOneScore += teamOneScore
-    gameState.scores.currentTeamTwoScore += teamTwoScore
-    gameState.scores.currentTeamThreeScore += teamThreeScore
 
-    const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
-      detail: {
-          gameState: gameState
-      }
-    })
-    eventHub.dispatchEvent(roundScoresRecorded)
-    document.querySelector(".score--input1").value = '';
-    document.querySelector(".score--input2").value = '';
-    document.querySelector(".score--input3").value = '';  
+    if(teamOneScore <= 3 && teamTwoScore <= 3 && teamThreeScore <= 3){
 
-    round++
-    if (round >= 3) {
-        addToGameScoresArray(gameState.teams.teamOneName, gameState.scores.currentTeamOneScore)
-        addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
-        addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
-        findWinner(gameScoresArray)
+       const teamOneTotalScore = gameState.scores.currentTeamOneScore += teamOneScore
+       const teamTwoTotalScore = gameState.scores.currentTeamTwoScore += teamTwoScore
+       const teamThreeTotalScore = gameState.scores.currentTeamThreeScore += teamThreeScore
+    
+        const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
+          detail: {
+              gameState: gameState
+          }
+        })
+        eventHub.dispatchEvent(roundScoresRecorded)
+        document.querySelector(".score--input1").value = '';
+        document.querySelector(".score--input2").value = '';
+        document.querySelector(".score--input3").value = '';  
+    
+        round++
+        if (round >= 3) {
+            addToGameScoresArray(gameState.teams.teamOneName, gameState.scores.currentTeamOneScore)
+            addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
+            addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
+            findWinner(gameScoresArray)
+            
+            const newScoreTeamOne = {
+                gameScore: teamOneTotalScore,
+                teamId: gameState.teams.teamOneId,
+                gameTimeStamp: Date.now()
+            }
+            const newScoreTeamTwo = {
+                gameScore: teamTwoTotalScore,
+                teamId: gameState.teams.teamTwoId,
+                gameTimeStamp: Date.now()
+            }
+            const newScoreTeamThree = {
+                gameScore: teamThreeTotalScore,
+                teamId: gameState.teams.teamThreeId,
+                gameTimeStamp: Date.now()
+            }
+            // Change API state and application state
 
-
+            saveScores(newScoreTeamOne)
+            saveScores(newScoreTeamTwo)
+            saveScores(newScoreTeamThree)
+            
+        }
+    }
+    else {
+        window.alert("Scores have to be below 3 points per team! Please follow these rules!")
     }
     }
   }
