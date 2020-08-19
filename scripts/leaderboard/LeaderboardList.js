@@ -14,6 +14,10 @@ eventHub.addEventListener("teamStateChanged", () => {
     listLeaderboard()
 })
 
+eventHub.addEventListener("scoreStateChanged", () => {
+    listLeaderboard()
+})
+
 
 export const listLeaderboard = () => {  
     let leaderboardData = []

@@ -1,8 +1,10 @@
 import{useTeams} from "../teams/TeamProvider.js"
 import { saveScores } from "../score/ScoreProvider.js";
+import { buttonRender } from "./GameStartButton.js";
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".main--game-play")
+const scoreTarget = document.querySelector(".popup")
 
 let gameState = {
   scores: {
@@ -131,7 +133,7 @@ eventHub.addEventListener("click", clickEvent => {
             saveScores(newScoreTeamOne)
             saveScores(newScoreTeamTwo)
             saveScores(newScoreTeamThree)
-            
+            renderWinner()
         }
     }
     else {
@@ -141,4 +143,24 @@ eventHub.addEventListener("click", clickEvent => {
   }
 )
 
+const renderWinner = () => {
+    const sortedArray = gameScoresArray.sort((a, b) => {
+        return b.score - a.score
+    })
 
+    scoreTarget.innerHTML = `
+        <div class="rankOne">First Place: ${sortedArray[0].name}</div>
+        <div class="rankTwo">Second Place: ${sortedArray[1].name}</div>
+        <div class="rankThree">Three Place: ${sortedArray[2].name}</div>
+
+        <button id="closeBtn">Close</button>
+    `
+    scoreTarget.classList.add("visible")
+}
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "closeBtn") {
+        scoreTarget.classList.remove("visible")
+        buttonRender()
+}
+})
