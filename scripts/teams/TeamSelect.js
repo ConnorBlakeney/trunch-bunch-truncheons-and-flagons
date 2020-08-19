@@ -9,12 +9,37 @@ let teams = []
 const teamSizeLimit = 3
 
 eventHub.addEventListener("teamStateChanged", () => {
-  TeamSelect()
+  prepareData()
+  render()
 })
 
 eventHub.addEventListener("playerStateChanged", () => {
-  TeamSelect()
+  prepareData()
+  render()
 })
+
+export const TeamSelect = () => {
+  getTeams()
+    .then(getPlayers)
+    .then(() => {
+      prepareData()
+      render()
+  })
+}
+
+const prepareData = () => {
+  players = usePlayers()
+  teams = useTeams()
+  teams = teams.filter( team => {
+    let playerCount = 0
+    players.forEach( player => {
+      if( player.teamId === team.id) {
+        playerCount++
+      }
+    })
+    return playerCount < teamSizeLimit
+  })
+}
 
 const render = () => {
   contentTarget.innerHTML = `
@@ -27,27 +52,4 @@ const render = () => {
               .join("")}
         </select>
     `
-}
-
-export const TeamSelect = () => {
-  getTeams()
-    .then(getPlayers)
-    .then(() => {
-      players = usePlayers()
-      teams = useTeams()
-      filterOutFullTeams()
-      render()
-  })
-}
-
-const filterOutFullTeams = () => {
-  teams = teams.filter( team => {
-    let playerCount = 0
-    players.forEach( player => {
-      if( player.teamId === team.id) {
-        playerCount++
-      }
-    })
-    return playerCount < teamSizeLimit
-  })
 }
