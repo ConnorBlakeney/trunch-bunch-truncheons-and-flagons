@@ -7,16 +7,20 @@ const contentTarget = document.querySelector(".create-team-form--container")
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "teamButton") {
     const teamName = document.querySelector("#teamName")
-
-    // Make a new object representation of a note
-    const newTeam = {
-      name: teamName.value,
-      timestamp: Date.now(),
+    if(teamName.length <= 11) {
+      const newTeam = {
+        name: teamName.value,
+        timestamp: Date.now(),
+      }
+  
+      // Change API state and application state
+      saveTeam(newTeam)
+      render()
     }
-
-    // Change API state and application state
-    saveTeam(newTeam)
-    render()
+      else {
+        window.alert("Character limit for team name is 11. Please follow these rules! ")
+      }
+    // Make a new object representation of a note
   }
 })
 
