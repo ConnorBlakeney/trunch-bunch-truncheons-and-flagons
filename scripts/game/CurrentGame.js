@@ -1,5 +1,5 @@
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".currentGameScore")
+const contentTarget = document.querySelector(".currentGame--container")
 
 eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
     const gameState = customEvent.detail.gameState
@@ -13,26 +13,36 @@ eventHub.addEventListener("roundScoresHaveBeenRecorded", customEvent => {
 const render = gameState => {
 
     contentTarget.innerHTML = `
-    <h3>Current Game</h3>
-        <div className="teams">
-            <div class="team team__header">
-                <div class="team__columnHeader team__name">Name</div>
-                <div class="team__columnHeader team__score">Score</div>
+        <div class="scoreboard">
+            <h3>Current Game</h3>
+            <div class="scoreboard-row">
+                <div class="scoreboard-team-name">Name</div>
+                <div class="scoreboard-score">Score</div>
             </div>
-        <div class="leaderboard-row">
-        <div class="leaderboard-team-name">
-            ${gameState.teams.teamOneName}
-            ${gameState.scores.currentTeamOneScore}
-        </div>
-        <div class="leaderboard-player-count">
-            ${gameState.teams.teamTwoName}
-            ${gameState.scores.currentTeamTwoScore}
-        </div>
-        <div class="leaderboard-score">
-            ${gameState.teams.teamThreeName}
-            ${gameState.scores.currentTeamThreeScore}
-        </div>
-        </div>
+            <div class="scoreboard-row">
+                <div class="scoreboard-team-name">
+                    ${gameState.teams.teamOneName}
+                </div>
+                <div class="scoreboard-score">
+                    ${gameState.scores.currentTeamOneScore}
+                </div>
+            </div>
+            <div class="scoreboard-row">
+                <div class="scoreboard-team-name">
+                    ${gameState.teams.teamTwoName}
+                </div>
+                <div class="scoreboard-score">
+                    ${gameState.scores.currentTeamTwoScore}
+                </div>
+            </div>
+            <div class="scoreboard-row">
+                <div class="scoreboard-team-name">
+                    ${gameState.teams.teamThreeName}
+                </div>
+                <div class="scoreboard-score">
+                    ${gameState.scores.currentTeamThreeScore}
+                </div>
+            </div>
         </div>
 `
 }

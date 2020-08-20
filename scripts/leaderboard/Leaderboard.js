@@ -1,13 +1,13 @@
 export const LeaderboardHTML = (leaderboardObj) => {
     return `
-    <div class="leaderboard-row">
-        <div class="leaderboard-team-name">
+    <div class="scoreboard-row">
+        <div class="scoreboard-team-name">
             ${leaderboardObj.teamName}
         </div>
-        <div class="leaderboard-player-count">
+        <div class="scoreboard-player-count">
             ${leaderboardObj.playerCount}
         </div>
-        <div class="leaderboard-score">
+        <div class="scoreboard-score">
             ${leaderboardObj.teamScore}
         </div>
     </div>
