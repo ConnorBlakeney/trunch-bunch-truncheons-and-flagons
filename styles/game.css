@@ -1,8 +1,12 @@
 .main--content {
-  flex: 3 0 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      flex: 3 0 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.main--game-play {
+      background-color: rgb(196, 193, 193);
 }
 
 .popup {
