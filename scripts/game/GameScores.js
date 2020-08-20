@@ -96,12 +96,6 @@ eventHub.addEventListener("click", clickEvent => {
        const teamTwoTotalScore = gameState.scores.currentTeamTwoScore += teamTwoScore
        const teamThreeTotalScore = gameState.scores.currentTeamThreeScore += teamThreeScore
     
-        const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
-          detail: {
-              gameState: gameState
-          }
-        })
-        eventHub.dispatchEvent(roundScoresRecorded)
         document.querySelector(".score--input1").value = '';
         document.querySelector(".score--input2").value = '';
         document.querySelector(".score--input3").value = '';  
@@ -112,7 +106,8 @@ eventHub.addEventListener("click", clickEvent => {
             addToGameScoresArray(gameState.teams.teamTwoName, gameState.scores.currentTeamTwoScore)
             addToGameScoresArray(gameState.teams.teamThreeName, gameState.scores.currentTeamThreeScore)
             findWinner(gameScoresArray)
-            
+            round = 0
+
             const newScoreTeamOne = {
                 gameScore: teamOneTotalScore,
                 teamId: gameState.teams.teamOneId,
@@ -134,7 +129,25 @@ eventHub.addEventListener("click", clickEvent => {
             saveScores(newScoreTeamTwo)
             saveScores(newScoreTeamThree)
             renderWinner()
+            gameState = {
+                scores: {
+                    currentTeamOneScore: 0,
+                    currentTeamTwoScore: 0,
+                    currentTeamThreeScore: 0
+                },
+                teams: {
+                    teamOneName: "",
+                    teamTwoName: "",
+                    teamThreeName: ""
+                }
+              }
         }
+        const roundScoresRecorded = new CustomEvent("roundScoresHaveBeenRecorded", {
+            detail: {
+                gameState: gameState
+            }
+          })
+          eventHub.dispatchEvent(roundScoresRecorded)
     }
     else {
         window.alert("Scores have to be below 3 points per team! Please follow these rules!")
@@ -163,4 +176,5 @@ eventHub.addEventListener("click", clickEvent => {
         scoreTarget.classList.remove("visible")
         buttonRender()
 }
+
 })
