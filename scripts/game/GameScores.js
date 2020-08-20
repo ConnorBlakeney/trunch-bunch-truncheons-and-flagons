@@ -90,7 +90,10 @@ eventHub.addEventListener("click", clickEvent => {
     const teamTwoScore = parseInt(document.querySelector(".score--input2").value)
     const teamThreeScore = parseInt(document.querySelector(".score--input3").value)
 
-    if(teamOneScore <= 3 && teamTwoScore <= 3 && teamThreeScore <= 3){
+    if (teamOneScore < 0 || teamTwoScore < 0 || teamThreeScore < 0) {
+        window.alert("Cannot enter a negative number!")
+
+    } else if(teamOneScore <= 3 && teamTwoScore <= 3 && teamThreeScore <= 3){
 
        const teamOneTotalScore = gameState.scores.currentTeamOneScore += teamOneScore
        const teamTwoTotalScore = gameState.scores.currentTeamTwoScore += teamTwoScore
@@ -148,7 +151,12 @@ eventHub.addEventListener("click", clickEvent => {
             }
           })
           eventHub.dispatchEvent(roundScoresRecorded)
+
+    } else if(isNaN(teamOneScore) || isNaN(teamTwoScore) && isNaN(teamThreeScore))  {
+        window.alert("Please only enter numbers!")
     }
+
+
     else {
         window.alert("Scores have to be below 3 points per team! Please follow these rules!")
     }

@@ -14,6 +14,11 @@
       "name": "The Balrogs",
       "timestamp": 1597694413748,
       "id": 3
+    },
+    {
+      "name": "Flagon Hags",
+      "timestamp": 1597953057373,
+      "id": 4
     }
   ],
   "players": [
@@ -51,56 +56,41 @@
       "countryOrigin": "Moria",
       "teamId": 3,
       "id": 6
+    },
+    {
+      "nameFirst": "fahsdl",
+      "nameLast": "f",
+      "countryOrigin": "f",
+      "teamId": 2,
+      "id": 7
+    },
+    {
+      "nameFirst": "Hank",
+      "nameLast": "Big",
+      "countryOrigin": "Hankbig",
+      "teamId": 0,
+      "id": 8
+    },
+    {
+      "nameFirst": "Hank",
+      "nameLast": "Big",
+      "countryOrigin": "Hankbig",
+      "teamId": 2,
+      "id": 9
     }
   ],
   "teamScores": [
     {
-      "gameScore": 5,
-      "teamId": 1,
-      "gameTimeStamp": 1597953535367,
+      "gameScore": 6,
+      "teamId": 2,
+      "gameTimeStamp": 1597953164840,
       "id": 1
     },
     {
-      "gameScore": 7,
-      "teamId": 2,
-      "gameTimeStamp": 1597953535367,
+      "gameScore": 4,
+      "teamId": 4,
+      "gameTimeStamp": 1597953164840,
       "id": 2
-    },
-    {
-      "gameScore": 5,
-      "teamId": 3,
-      "gameTimeStamp": 1597953535367,
-      "id": 3
-    },
-    {
-      "gameScore": 6,
-      "teamId": 2,
-      "gameTimeStamp": 1597953672073,
-      "id": 4
-    },
-    {
-      "gameScore": 4,
-      "teamId": 1,
-      "gameTimeStamp": 1597953672073,
-      "id": 5
-    },
-    {
-      "gameScore": 4,
-      "teamId": 3,
-      "gameTimeStamp": 1597953672073,
-      "id": 6
-    },
-    {
-      "gameScore": 8,
-      "teamId": 1,
-      "gameTimeStamp": 1597953689208,
-      "id": 7
-    },
-    {
-      "gameScore": 5,
-      "teamId": 2,
-      "gameTimeStamp": 1597953689208,
-      "id": 8
     },
     {
       "gameScore": 5,
