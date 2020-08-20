@@ -8,10 +8,17 @@
 
 body {
 	font-family: fantasy;
-	background-color: rgb(118, 228, 228);
+	background-color: rgb(80, 80, 80);
 }
 
 main {
 	display: flex;
 	flex-direction: row wrap;
+}
+
+.main--content {
+	background-image: url("/images/tim-mossholder-N8TigfbRwyY-unsplash.jpg");
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
