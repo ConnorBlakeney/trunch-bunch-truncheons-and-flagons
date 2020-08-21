@@ -15,3 +15,12 @@ main {
 	display: flex;
 	flex-direction: row wrap;
 }
+
+::placeholder {
+  color: rgba(0, 17, 255, 0.308);
+}
+
+input {
+  
+  background-color: white;
+}
