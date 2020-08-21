@@ -3,6 +3,7 @@ import {savePlayer} from "./PlayerProvider.js"
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".create-player-form--container")
 
+
 // Handle browser-generated click event in component
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "playerButton") {
@@ -11,17 +12,24 @@ eventHub.addEventListener("click", (clickEvent) => {
     const countryOrigin = document.querySelector("#countryOrigin")
     const playerTeam = document.querySelector("#teamSelect")
 
-    // Make a new object representation of a note
-    const newPlayer = {
-      nameFirst: playerNameFirst.value,
-      nameLast: playerNameLast.value,
-      countryOrigin: countryOrigin.value,
-      teamId: parseInt(playerTeam.value),
+    if(playerTeam.value === "0") {
+      window.alert("Players have to be assigned to a team! Please follow these rules!")
+    }
+    else {
+      
+      // Make a new object representation of a note
+      const newPlayer = {
+        nameFirst: playerNameFirst.value,
+        nameLast: playerNameLast.value,
+        countryOrigin: countryOrigin.value,
+        teamId: parseInt(playerTeam.value),
+      }
+  
+      // Change API state and application state
+      savePlayer(newPlayer)
+      render()
     }
 
-    // Change API state and application state
-    savePlayer(newPlayer)
-    render()
   }
 })
 
