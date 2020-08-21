@@ -56,27 +56,6 @@
       "countryOrigin": "Moria",
       "teamId": 3,
       "id": 6
-    },
-    {
-      "nameFirst": "fahsdl",
-      "nameLast": "f",
-      "countryOrigin": "f",
-      "teamId": 2,
-      "id": 7
-    },
-    {
-      "nameFirst": "Hank",
-      "nameLast": "Big",
-      "countryOrigin": "Hankbig",
-      "teamId": 0,
-      "id": 8
-    },
-    {
-      "nameFirst": "Hank",
-      "nameLast": "Big",
-      "countryOrigin": "Hankbig",
-      "teamId": 2,
-      "id": 9
     }
   ],
   "teamScores": [
