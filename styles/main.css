@@ -17,7 +17,7 @@ body {
 main {
 	display: flex;
   border: 1px black solid;
-
+	width: 90%;
 }
 
 header {

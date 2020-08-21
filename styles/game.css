@@ -1,5 +1,5 @@
 .main--content {
-      flex: 0 0 30rem;
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
