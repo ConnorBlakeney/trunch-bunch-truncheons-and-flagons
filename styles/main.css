@@ -11,10 +11,12 @@ body {
 	background-color: rgb(118, 228, 228);
 	display: flex;
 	flex-flow: column;
+	align-items: center;
 }
 
 main {
 	display: flex;
+  border: 1px black solid;
 
 }
 

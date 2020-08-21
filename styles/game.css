@@ -1,8 +1,11 @@
 .main--content {
-      flex: 3 0 5rem;
+      flex: 0 0 30rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-flow: column;
+	background-color: rgb(156, 237, 237);
+
 }
 
 .main--game-play {
