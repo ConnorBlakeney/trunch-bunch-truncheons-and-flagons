@@ -7,7 +7,6 @@ const contentTarget = document.querySelector(".create-team-form--container")
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "teamButton") {
     const teamName = document.querySelector("#teamName")
-    console.log(teamName.value.length)
     if(teamName.value.length <= 11) {
       const newTeam = {
         name: teamName.value,
