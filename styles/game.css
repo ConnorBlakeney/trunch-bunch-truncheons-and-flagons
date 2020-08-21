@@ -1,8 +1,16 @@
 .main--content {
-  flex: 3 0 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      flex: 3 0 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("/images/tim-mossholder-N8TigfbRwyY-unsplash.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.main--game-play {
+      background-color: rgb(196, 193, 193);
 }
 
 .popup {
@@ -20,6 +28,7 @@
       left: 50%;
       z-index: 2;
 }
+
 .visible {
       visibility: visible;
       width: 150%;

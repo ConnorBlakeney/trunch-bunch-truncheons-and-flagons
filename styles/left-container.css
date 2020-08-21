@@ -2,7 +2,8 @@
       flex: 1 0 3rem;
       display: flex;
       flex-direction: column;
-      width: 30%
+      width: 30%;
+      background-color:  rgb(196, 193, 193);
 }
 
 .create-team-form--container {
