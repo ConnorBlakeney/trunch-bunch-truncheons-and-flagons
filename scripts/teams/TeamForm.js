@@ -31,7 +31,7 @@ eventHub.addEventListener("teamFormHasRendered", () => {
       buttonCreateTeam.disabled = false
       buttonCreateTeam.innerHTML = `
       Create Team`
-     }
+    }
     })
 })
 
