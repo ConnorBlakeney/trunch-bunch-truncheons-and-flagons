@@ -1,9 +1,11 @@
 .left-container {
-      flex: 1 0 3rem;
+      flex: 0 0 3rem;
       display: flex;
       flex-direction: column;
       width: 30%;
-      background-color:  rgb(196, 193, 193);
+      background-color: rgb(236, 236, 96);
+      padding: 10px;
+
 }
 
 .create-team-form--container {
