@@ -1,6 +1,7 @@
 .left-container {
-      flex: 0 0 3rem;
+      flex-basis: 3rem;
       display: flex;
+      flex: 1;
       flex-direction: column;
       width: 30%;
       background-color: rgb(236, 236, 96);
@@ -9,8 +10,11 @@
 }
 
 .create-team-form--container {
-      margin: 10px 0;
-      border: 1px black solid;
+  flex: 1;
+  align-content: center;
+  align-items: stretch;
+  padding: -.5rem .5rem;
+  border: 1px black solid;
 }
 
 .create-player {
@@ -20,11 +24,46 @@
 
 .playerForm {
       display: flex;
+      flex: 1;
       flex-direction: column;
       width: 100%;
-      justify-content: stretch;
       align-content: center;
       align-items: stretch;
       padding: -.5rem .5rem;
 }
 
+.teamSelectContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: stretch;
+  align-content: center;
+  align-items: stretch;
+  padding: -.5rem .5rem;
+  background-color: rgb(10, 33, 161);
+  color: goldenrod;
+}
+
+.teamForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.addTeam {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.btn-add-new-team {
+  width: 100%;
+  height: auto;
+}
