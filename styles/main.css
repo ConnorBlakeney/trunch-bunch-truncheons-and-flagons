@@ -9,9 +9,20 @@
 body {
 	font-family: fantasy;
 	background-color: rgb(118, 228, 228);
+	display: flex;
+	flex-flow: column;
 }
 
 main {
 	display: flex;
-	flex-direction: row wrap;
+
+}
+
+header {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	height: 12rem;
 }
