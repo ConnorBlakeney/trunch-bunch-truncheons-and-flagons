@@ -164,7 +164,7 @@ const renderWinner = () => {
     scoreTarget.innerHTML = `
         <div class="rankOne">First Place: ${sortedArray[0].name}</div>
         <div class="rankTwo">Second Place: ${sortedArray[1].name}</div>
-        <div class="rankThree">Three Place: ${sortedArray[2].name}</div>
+        <div class="rankThree">Third Place: ${sortedArray[2].name}</div>
 
         <button id="closeBtn">Close</button>
     `
