@@ -7,12 +7,16 @@ const contentTarget = document.querySelector(".create-team-form--container")
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "teamButton") {
     const teamName = document.querySelector("#teamName")
+<<<<<<< HEAD
     if (teamName.value.length === 0) {
         window.alert("Please enter a team name!")
     }
       else if (teamName.value.length >= 11){
         window.alert("Character limit for team name is 11. Please follow these rules! ")
       } else {
+=======
+    if(teamName.value.length <= 11) {
+>>>>>>> 1d53d91bcb8c500011b1d54b248d47d440f4cc6d
       const newTeam = {
         name: teamName.value,
         timestamp: Date.now(),
