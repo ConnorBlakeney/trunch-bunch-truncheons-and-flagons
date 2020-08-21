@@ -9,8 +9,9 @@
 }
 
 .main--game-play {
-      background-color: rgb(23, 23, 216);
-      padding: 1rem;
+      background-color: rgb(0 , 200, 255);
+      padding: 2rem;
+      border-radius: 1rem;
 }
 
 .popup {

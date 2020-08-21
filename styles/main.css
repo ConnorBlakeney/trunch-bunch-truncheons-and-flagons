@@ -14,10 +14,13 @@ body {
 	align-items: center;
 }
 
+
 main {
 	display: flex;
-  border: 1px black solid;
+  border: 2px rgb(255,	1,	191	) solid;
 	width: 90%;
+	padding: 2rem;
+	border-radius: 1rem;
 }
 
 header {
