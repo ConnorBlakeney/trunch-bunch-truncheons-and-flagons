@@ -28,6 +28,13 @@ Game Play:
 1. Test out adding a new team, assigning players to the team, starting the game, entering scores ect. We are especially proud of the custom event flow, and the form validation features of the game.
 
 ------------------------
+
+Screenshots:
+
+The final product in all its glory:
+
+![Example page](/images/examplePage.png)
+
 Here is our wireframe. We created it in sketchboard.me which has intentionally rough lines to encourage focusing on the big picture.
 
 ![Wireframe Version 2](/images/sketchboard/wireframe-v2.png "Wireframe Version 2")
@@ -59,4 +66,4 @@ We learned about ERD's half way through the course of this project, and immediat
 
 - [x] [Ch. 8 - Selecting Teams For Game](https://github.com/nashville-software-school/client-side-mastery/blob/cohort-42/book-2-glassdale-pd/chapters/TF_CHOOSE_TEAMS.md "Ch. 8 - Selecting Teams For Game")
 
-- [ ] [Ch. 9 - Recording Scores](https://github.com/nashville-software-school/client-side-mastery/blob/cohort-42/book-2-glassdale-pd/chapters/TF_ROUND_SCORES.md "Ch. 9 - Recording Scores")
+- [x] [Ch. 9 - Recording Scores](https://github.com/nashville-software-school/client-side-mastery/blob/cohort-42/book-2-glassdale-pd/chapters/TF_ROUND_SCORES.md "Ch. 9 - Recording Scores")
